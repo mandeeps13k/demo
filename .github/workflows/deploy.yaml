@@ -29,5 +29,5 @@ jobs:
           ECR_REGISTRY: 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo  # Replace with your ECR registry URL
           IMAGE_TAG: your-docker-image:latest  # Replace with your desired image tag
         run: |
-          docker buildx build --platform linux/amd64 -t $ECR_REGISTRY/$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$IMAGE_TAG
+          docker buildx build --platform linux/amd64 -t 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo/latest --push .
+          docker push 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo/latest
