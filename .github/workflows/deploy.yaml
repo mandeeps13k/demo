@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Docker Buildx
+      - name: Set up Docker
         uses: docker/setup-buildx-action@v1
 
-      - name: Login to AWS ECR
+      - name: authenticate with AWS ECR
         id: login-ecr
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -26,7 +26,7 @@ jobs:
 
       - name: Build and push Docker image to ECR
         run: |
-          aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 810638962855.dkr.ecr.eu-central-1.amazonaws.com
+          aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin ${secrets.ECR_REPO}}
           docker build -t demo .
-          docker tag demo:latest 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo:latest
-          docker push 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo:latest
+          docker tag demo:latest ${secrets.ECR_REPO}}/demo:latest
+          docker push ${secrets.ECR_REPO}}/demo:latest
