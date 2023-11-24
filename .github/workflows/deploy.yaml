@@ -27,4 +27,5 @@ jobs:
       - name: Build and push Docker image to ECR
         run: |
           docker build -t demo .
+          docker tag demo:latest 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo:latest
           docker push 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo:latest
