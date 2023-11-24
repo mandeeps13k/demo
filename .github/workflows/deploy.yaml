@@ -26,6 +26,7 @@ jobs:
 
       - name: Build and push Docker image to ECR
         run: |
+          aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 810638962855.dkr.ecr.eu-central-1.amazonaws.com
           docker build -t demo .
           docker tag demo:latest 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo:latest
           docker push 810638962855.dkr.ecr.eu-central-1.amazonaws.com/demo:latest
