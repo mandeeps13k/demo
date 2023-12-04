@@ -8,7 +8,8 @@ Framework - Django v4.2.7  ; Backend DB - AWS RDS
 
 ## Setup and Workflow
 
-The git repository contains a Django Project. A Dockerfile has been created to Dockerize the given Project.
+The git repository contains a Django Project. 
+A Dockerfile has been created to Dockerize the given Project.
 
 The repository is also configured with TWO Different Github Actions Workflows :
 
