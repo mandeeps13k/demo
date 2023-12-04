@@ -6,7 +6,6 @@ on:
   workflow_dispatch: {}
   push:
     branches: ["master", "main"]
-  # Schedule the CI job (this method uses cron syntax):
   schedule:
     - cron: '20 17 * * *' 
 
