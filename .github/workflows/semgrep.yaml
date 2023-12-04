@@ -6,8 +6,6 @@ on:
   workflow_dispatch: {}
   push:
     branches: ["master", "main"]
-  schedule:
-    - cron: '20 17 * * *' 
 
 jobs:
   semgrep:
