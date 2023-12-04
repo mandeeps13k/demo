@@ -22,7 +22,7 @@ The repository is also configured with TWO Different Github Actions Workflows :
 ## Steps to Deploy
 
 1. The given repo pushes the Docker Image of application to AWS ECR, Use the project to dockerize the application and push the build to ECR.
-2. The Image can then be used for any deployment in EKS Clusterl
+2. The Image can then be used for any deployment in EKS Cluster or any other k8s deployment.
 3. Steps to manually run the application are as follows ::
      - `python3 manage.py migrate`
      - `python3 manage.py runserver`
