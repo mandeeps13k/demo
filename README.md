@@ -17,6 +17,16 @@ The repository is also configured with TWO Different Github Actions Workflows :
 
 2. **Semgrep** - This workflow runs on each Pull Request as well as any merge to master/main branch of the project. Semgrep has been configured to run with Django specific ruleset to identify vulnerabilities related to Django framework.
 
+
+
+## Steps to Deploy
+
+1. The given repo pushes the Docker Image of application to AWS ECR, Use the project to dockerize the application and push the build to ECR.
+2. The Image can then be used for any deployment in EKS Clusterl
+3. Steps to manually run the application are as follows ::
+     - `python3 manage.py migrate`
+     - `python3 manage.py runserver`
+
    
 
 
